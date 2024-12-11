@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Myportfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+            color: aliceblue;
+            font-family: 'Courier New', monospace;
+        }
+        nav{
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            height: 80px;
+            background-color: #1e222a;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border: 2px solid #3498db;
+            border-radius: 2px;
+            border-width: 2px;
+            padding: 10px;
+
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none; 
+        }
+        nav ul li a{
+            
+            margin: 0 30px;
+            text-decoration: none;
+            color: #2ecc71;
+        }
+        nav ul li a:hover{
+            color: rgb(207, 4, 210);
+            font-size: 1.1rem;
+
+        }
+        .left{
+            font-size: 4rem;
+        }
+
+        .firstsec{
+            display: flex;
+            justify-content: space-around;
+            margin: 23px 0;
+            align-items: center;
+           margin:150px 0 ;
+           
+        }
+        .firstsec >div{
+           width: 30%; 
+        }
+        .leftsec{
+           margin: 50px 0;
+           font-size: 3rem;
+           
+        }
+        .rightsec img{
+          
+            height: 70%;
+            width: 70%;
+            border: 3px solid #3498db ;
+            border-radius: 0 50px;
+        }
+        .pup{
+            color: rgb(162, 85, 235);
+            font-size: 5rem;
+        }
+
+        #cm{
+            background-color: #1e222a;
+            
+            border: 2px solid #3498db;
+            border-radius: 5px;
+        }
+/* Style the 'About Me' section */
+/* Style the 'About Me' section */
+    #about {
+    background-color: black;
+    color: #fff;
+    padding: 40px;
+    }
+
+    #about h2 {
+
+    font-size: 24px;
+    color: #3498db;
+    margin-bottom: 20px;
+    }
+
+    #about pre {
+        background-color: #1e222a;
+        padding: 5px;
+        color: #fff;
+        border: 2px solid #3498db;
+        border-radius: 5px;
+        font-size: 16px;
+        overflow-x: auto;
+        white-space: pre-wrap;
+    }
+
+    #about code.language-javascript {
+        display: block;
+        background-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        font-family: 'Courier New', monospace;
+        line-height: 1.5;
+    }
+
+    #about .property {
+        color: #9b59b6;
+    }
+
+    #about .variable {
+        color: #3498db;
+    }
+
+    #about .method {
+        color: #e74c3c;
+    }
+
+    #about .argument {
+        color: #e67e22;
+    }
+
+    #about .value {
+        color: #2ecc71;
+    }
+
+    #about .comment {
+        color: #95a5a6;
+    }
+
+    #about .operator {
+        color: #3498db;
+    }
+
+/* Style the 'Skills' section */
+#skills {
+    background-color: black;
+    color: #fff;
+    padding: 40px;
+}
+
+#skills h2 {
+    font-size: 24px;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+#skills pre {
+    background-color: #1e222a;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    font-size: 16px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+#skills code.language-c {
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.keyword {
+    color: #3498db; /* Color for keywords, e.g., "Skills" */
+}
+
+.skill {
+    color: #2ecc71; /* Color for skills, e.g., "HTML", "CSS" */
+}
+
+/* Style the 'Projects' section */
+#projects {
+    background-color: black;
+    color: #fff;
+    padding: 40px;
+}
+
+#projects h2 {
+    font-size: 24px;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+#projects pre {
+    background-color: #1e222a;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    font-size: 16px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+#projects code.language-c {
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Style the 'Contact Me' section */
+#contact {
+    background-color:black;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 24px;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    display: block;
+    font-size: 20px;
+    color: #3498db;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.contact-link i {
+    margin-right: 10px;
+}
+
+.social-media a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.social-link i {
+    margin-right: 10px;
+}
+
+
+footer {
+    position:fixed;
+    bottom: 0px;
+
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    
+    background-color: #282c35;
+    color: #fff;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+  
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    color: #2ecc71;
+}
+  
+ /* home styling*/
+     #vd{
+        color: #2ecc71;
+     }
+
+    /* nav blink effect*/ 
+            .left{	
+        animation-name:blink;
+        animation-duration:5s;
+        animation-timing-function:ease-in;
+        animation-iteration-count:Infinite;
+        }
+        @keyframes blink{
+        0%{color:white;}
+        25%{color: #2ecc71;}
+        50%{color:black;}
+        75%{color: #9b59b6;}
+        100%{color: #3498db;}
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"> {divya portfolio}</div>
+            <div class="right">
+                <ul>
+                    <li> <a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#contact">contact</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="home"></section>
+    <main class="firstsec">
+        <div class="leftsec"><p id="vd"> void main() </p> { <br> hi my name is 
+            <span class="pup">Iranna</span>
+            
+            <div>
+                <a href="#contact" id="cm"> contact me  </a>
+            </div> <br> }
+        </div>
+        
+       
+        <div class="rightsec">
+            <img src="pic3.png" alt="" srcset="">
+        </div>
+    </main>
+
+<hr>
+    <section id="about">
+        <h2>About Me</h2>
+        <pre>        <p>class <span class="variable">FreshGraduate</span> {<br>
+            &emsp;constructor(<span class="argument">name</span>) {<br>
+            &emsp;&emsp;<span class="property">this.name</span> = <span class="value">name</span>;<br>
+            &emsp;}<br><br>
+            &emsp;<span class="method">passion</span>() {<br>
+            &emsp;&emsp;<span class="comment">// Passion for words and creativity</span><br>
+            &emsp;&emsp;return <span class="value">"Writing" </span> + <span class="operator">+</span> <span class="value">"Poetry" </span> + <span class="operator">+</span> <span class="value">"Content Writing";</span><br>
+            &emsp;}<br><br>
+            &emsp;<span class="property">skills</span>() {<br>
+            &emsp;&emsp;<span class="comment">// Technical skills</span><br>
+            &emsp;&emsp;return <span class="value">"C" </span> + <span class="operator">+</span> <span class="value">"HTML" </span> + <span class="operator">+</span> <span class="value">"CSS" </span> + <span class="operator">+</span> <span class="value">"JavaScript";</span><br>
+            &emsp;}<br><br>
+            &emsp;<span class="method">aspiration</span>() {<br>
+            &emsp;&emsp;<span class="comment">// Aims and aspirations</span><br>
+            &emsp;&emsp;return <span class="value">"Creating Engaging Web Experiences" </span> + <span class="operator">+</span> <span class="value">"Innovative Content";</span><br>
+            &emsp;}<br>
+            }</p></pre>
+
+    </section>
+    
+    
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <pre><code class="language-c">
+        #include &lt;stdio.h&gt;
+        
+        int main() {
+            printf("<span class='keyword'>Skills</span>:\n");
+    
+            char skills[][50] = {
+                "<span class='skill'>HTML</span>",
+                "<span class='skill'>CSS</span>",
+                "<span class='skill'>JavaScript</span>",
+                "<span class='skill'>C Programming</span>",
+                "<span class='skill'>Content Writing</span>",
+                "<span class='skill'>Problem Solving</span>",
+                "<span class='skill'>Poetry Writing</span>"
+            };
+    
+            for (int i = 0; i &lt; sizeof(skills) / sizeof(skills[0]); i++) {
+                printf("- %s\n", skills[i]);
+            }
+    
+            return 0;
+        }
+        </code></pre>
+    </section>
+    
+    
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <pre><code class="language-c">
+    /***********************************
+     * Project: Portfolio Website
+     * Description: Created my own portfolio website to showcase my skills and projects.
+     * Technologies: HTML, CSS, JavaScript
+     * Git Repository: <a href="https://github.com/yourusername/online-voting-management" target="_blank">GitHub Repository</a>
+     ***********************************/
+    
+     /***********************************
+     * Project: Online Voting Management
+     * Description: Developed an Online Voting Management System, allowing users to cast their votes securely and efficiently.
+     * Technologies: HTML, CSS, PHP, SQL
+     * Git Repository: <a href="https://github.com/yourusername/online-voting-management" target="_blank">GitHub Repository</a>
+     ***********************************/
+
+     /***********************************
+      * Project: Online Quiz Master
+      * Description: Created an Online Quiz Master application that allows users to create, manage, and participate in online quizzes.
+      * Technologies: HTML, CSS, PHP, SQL
+      * Git Repository: <a href="https://github.com/yourusername/online-quiz-master" target="_blank">GitHub Repository</a>
+      ***********************************/
+        </code></pre>
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <a href="mailto:irannainamti1@gmail.com" class="contact-link">
+                <i class="far fa-envelope"></i> Email Me
+            </a>
+        </div>
+    
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/yourprofile" target="_blank" class="social-link">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+           <p>
+             (this website is created by taking help from youtube(codewithharry) and Chatgpt)
+            </p>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <p> 
+           <a href="CV_2023100720003733.pdf"> 
+            <i class="glyphicon glyphicon-file"></i> My Resume</a>
+        <a href="tel:9535028591"> <i class="glyphicon glyphicon-phone"></i> Phone number</a>
+        </p>
+    </footer>
+</body>
+</html>
